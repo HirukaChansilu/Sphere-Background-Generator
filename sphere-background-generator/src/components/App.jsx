@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <SphereContainer />
-      <div style={{ height: "2000px" }} />
+      <div className="w-1/12 bg-purple-400" style={{ height: "2000px" }}></div>
     </div>
   );
 }

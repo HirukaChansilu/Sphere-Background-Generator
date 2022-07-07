@@ -16,7 +16,7 @@ function Sphere(props) {
       className="absolute"
       src={encodeSvg(
         <svg
-          class="sphere"
+          className="sphere"
           width="400"
           height="400"
           viewBox="0 0 400 400"
@@ -33,10 +33,10 @@ function Sphere(props) {
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(128.5 109.5) rotate(50.6653) scale(311.588)"
             >
-              <stop offset="0.0" stop-color={`hsl(${hue}, 100%, 65%)`} />
-              <stop offset="0.5" stop-color={`hsl(${hue}, 50%, 40%)`} />
-              <stop offset="0.8" stop-color={`hsl(${hue}, 70%, 20%)`} />
-              <stop offset="1.0" stop-color={`hsl(${hue}, 83%, 10%)`} />
+              <stop offset="0.0" stopColor={`hsl(${hue}, 100%, 65%)`} />
+              <stop offset="0.5" stopColor={`hsl(${hue}, 50%, 40%)`} />
+              <stop offset="0.8" stopColor={`hsl(${hue}, 70%, 20%)`} />
+              <stop offset="1.0" stopColor={`hsl(${hue}, 83%, 10%)`} />
             </radialGradient>
           </defs>
         </svg>
