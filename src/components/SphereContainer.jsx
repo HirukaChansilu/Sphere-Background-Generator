@@ -8,10 +8,15 @@ function getRandomInt(min, max) {
 }
 
 function generateHues() {
-  const avaliableHues = [0, 22, 50, 115, 160, 220, 240, 280, 330];
   const finalHues = [];
+  const hue = getRandomInt(0, 360);
+  console.log("Hue:", hue);
   for (let i = 0; i < getRandomInt(6, 12); i++) {
-    finalHues.push(avaliableHues[getRandomInt(0, avaliableHues.length)]);
+    finalHues.push(
+      getRandomInt(0, 6) === 0
+        ? hue + getRandomInt(-45, 45)
+        : hue + 180 + getRandomInt(-90, 90)
+    );
   }
   return finalHues;
 }

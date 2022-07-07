@@ -17,14 +17,15 @@ function getRandomInt(min, max) {
 function Sphere(props) {
   const hue = props.hue;
   const sphereSize = getRandomInt(200, 700);
-  console.log(sphereSize);
   const styles = {
     top: `${getRandomInt(-10, 90)}%`,
     left: `${getRandomInt(-10, 90)}%`,
+    transform: "scale(0%)",
+    animation: "appear 0.5s ease-in-out 0.5s 1 normal forwards",
   };
   return (
     <img
-      className="absolute inset-0"
+      className="sphere absolute inset-0"
       style={styles}
       src={encodeSvg(
         <svg
