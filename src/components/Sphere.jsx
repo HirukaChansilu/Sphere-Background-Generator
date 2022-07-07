@@ -13,7 +13,7 @@ function Sphere(props) {
 
   return (
     <img
-      className="absolute"
+      className="absolute inset-0"
       src={encodeSvg(
         <svg
           className="sphere"
