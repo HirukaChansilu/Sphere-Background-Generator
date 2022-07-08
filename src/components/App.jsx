@@ -1,16 +1,197 @@
 import React from "react";
 import "./App.css";
-import Sphere from "./Sphere";
 import SphereContainer from "./SphereContainer";
+
+import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
   return (
-    <div>
-      <SphereContainer
-        content={<div className="w-1/12" style={{ height: "200px" }}></div>}
-      />
-      {/* <Sphere hue={180} /> */}
-    </div>
+    <ParallaxProvider>
+      <div>
+        <SphereContainer
+          content={
+            <div>
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>{" "}
+              <div
+                className="w-1/12 bg-red-400 m-3"
+                style={{ height: "150px" }}
+              ></div>
+            </div>
+          }
+        />
+      </div>
+    </ParallaxProvider>
   );
 }
 
