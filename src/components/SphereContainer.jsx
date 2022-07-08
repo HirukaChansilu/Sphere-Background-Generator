@@ -49,7 +49,14 @@ function SphereContainer(props) {
     >
       <div className="relative z-10 insphere-content">{props.content}</div>
       {generateHues(dimensions.height).map((hue, i) => {
-        return <Sphere key={i} hue={hue} dimensions={dimensions} />;
+        return (
+          <Sphere
+            key={i}
+            hue={hue}
+            dimensions={dimensions}
+            animate={props.animate}
+          />
+        );
       })}
     </div>
   );

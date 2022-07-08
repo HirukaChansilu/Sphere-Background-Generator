@@ -42,13 +42,28 @@ function Sphere(props) {
       style={styles}
     >
       <img
-        style={{
-          filter: "drop-shadow(0px 0px 40px rgb(0 0 0 / 0.3)",
-          transform: "scale(0%)",
-          opacity: 0.5,
-          animation:
-            "appear 0.5s ease-in-out 0.25s 1 forwards, grow 8s ease-in-out 1s infinite both",
-        }}
+        className="drop-shadow-2xl"
+        style={
+          props.animate
+            ? {
+                transform: "scale(0%)",
+                opacity: 0,
+                animation: `appear 0.5s ease-in-out 0.25s 1 forwards, grow ${getRandomInt(
+                  6,
+                  12
+                )}s ease-in-out 1s infinite both`,
+                WebkitAnimation: `appear 0.5s ease-in-out 0.25s 1 forwards, grow ${getRandomInt(
+                  6,
+                  12
+                )}s ease-in-out 1s infinite both`,
+              }
+            : {
+                transform: "scale(0%)",
+                opacity: 0,
+                animation: "appear 0.5s ease-in-out 0.25s 1 forwards",
+                WebkitAnimation: "appear 0.5s ease-in-out 0.25s 1 forwards",
+              }
+        }
         src={encodeSvg(
           <svg
             className="sphere"
