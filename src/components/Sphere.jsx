@@ -6,7 +6,6 @@ import { Buffer } from "buffer";
 function encodeSvg(reactElement) {
   return (
     "data:image/svg+xml;base64," +
-    // btoa(ReactDOMServer.renderToStaticMarkup(reactElement))
     Buffer.from(
       ReactDOMServer.renderToStaticMarkup(reactElement),
       "utf8"
@@ -22,29 +21,33 @@ function getRandomInt(min, max) {
 
 function Sphere(props) {
   const hue = props.hue;
-  const sphereSize = getRandomInt(200, 700);
+  const sphereSize =
+    props.dimensions.width > 800
+      ? getRandomInt(
+          (200 / 1500) * props.dimensions.width,
+          (700 / 1500) * props.dimensions.width
+        )
+      : getRandomInt(
+          (400 / 700) * props.dimensions.width,
+          (700 / 700) * props.dimensions.width
+        );
   const styles = {
     top: `${getRandomInt(-10, 98)}%`,
-    left: `${getRandomInt(-10, 90)}%`,
+    left: `${getRandomInt(-10, 98)}%`,
   };
   return (
     <Parallax
-      speed={getRandomInt(-100, -50)}
-      className="sphere absolute inset-0"
+      speed={getRandomInt(-90, -50)}
+      className="absolute inset-0"
       style={styles}
     >
       <img
-        // className={`animate-[appear_0.5s_ease-in-out_0.5s_1_forwards,grow_${getRandomInt(
-        //   2,
-        //   8
-        // )}s_ease-in-out_1s_infinite]`}
         style={{
-          transform: "scale(0%)",
           filter: "drop-shadow(0px 0px 40px rgb(0 0 0 / 0.3)",
-          animation: `appear 0.5s ease-in-out 0.5s 1 forwards, grow ${getRandomInt(
-            6,
-            12
-          )}s ease-in-out 1s infinite`,
+          transform: "scale(0%)",
+          opacity: 0.5,
+          animation:
+            "appear 0.5s ease-in-out 0.25s 1 forwards, grow 8s ease-in-out 1s infinite both",
         }}
         src={encodeSvg(
           <svg

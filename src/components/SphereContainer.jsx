@@ -30,12 +30,15 @@ function generateHues(contentHeight) {
 }
 
 function SphereContainer(props) {
-  const [height, setHeight] = useState(0);
+  const [dimensions, setDimensions] = useState({ height: 0, width: 0 });
 
   const ref = useRef();
   useEffect(() => {
     if (ref.current) {
-      setHeight(ref.current.offsetHeight);
+      setDimensions({
+        height: ref.current.offsetHeight,
+        width: ref.current.offsetWidth,
+      });
     }
   }, []);
 
@@ -45,8 +48,8 @@ function SphereContainer(props) {
       ref={ref}
     >
       <div className="relative z-10 insphere-content">{props.content}</div>
-      {generateHues(height).map((hue, i) => {
-        return <Sphere key={i} hue={hue} />;
+      {generateHues(dimensions.height).map((hue, i) => {
+        return <Sphere key={i} hue={hue} dimensions={dimensions} />;
       })}
     </div>
   );
