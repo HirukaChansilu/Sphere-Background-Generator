@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import SphereContainer from "./SphereContainer";
 
 import { ParallaxProvider } from "react-scroll-parallax";

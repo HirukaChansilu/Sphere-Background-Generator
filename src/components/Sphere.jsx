@@ -14,28 +14,6 @@ function encodeSvg(reactElement) {
   );
 }
 
-var moveLittle = function MoveLittle(speed, scrollY) {
-  //Get the current top of the slow element
-  var topVal = parseInt(slowDiv.style.top);
-  //Check scroll direction
-  if (isScrollingDown(scrollY)) {
-    topVal = topVal + speed;
-  } else {
-    topVal = topVal - speed;
-  }
-  //Set new top of slow element
-  slowDiv.style.top = topVal + "px";
-};
-
-var isScrollingDown = function IsScrollingDown(scrollY) {
-  var retVal = false;
-  if (scrollY > lastScrollTop) {
-    retVal = true;
-  }
-  lastScrollTop = scrollY;
-  return retVal;
-};
-
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -51,15 +29,22 @@ function Sphere(props) {
   };
   return (
     <Parallax
-      speed={getRandomInt(-100, -40)}
+      speed={getRandomInt(-100, -50)}
       className="sphere absolute inset-0"
       style={styles}
     >
       <img
+        // className={`animate-[appear_0.5s_ease-in-out_0.5s_1_forwards,grow_${getRandomInt(
+        //   2,
+        //   8
+        // )}s_ease-in-out_1s_infinite]`}
         style={{
           transform: "scale(0%)",
-          animation: "appear 0.5s ease-in-out 0.5s 1 normal forwards",
-          filter: "drop-shadow(0px 0px 40px rgb(0 0 0 / 0.2)",
+          filter: "drop-shadow(0px 0px 40px rgb(0 0 0 / 0.3)",
+          animation: `appear 0.5s ease-in-out 0.5s 1 forwards, grow ${getRandomInt(
+            6,
+            12
+          )}s ease-in-out 1s infinite`,
         }}
         src={encodeSvg(
           <svg

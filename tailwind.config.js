@@ -2,7 +2,24 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        appear: {
+          "0%": { transform: "scale(0%)", opacity: 0 },
+          "100%": { transform: "scale(90%)", opacity: 1 },
+        },
+        grow: {
+          "0%": { transform: "scale(90%)" },
+          "50%": { transform: "scale(110%)" },
+          "100%": { transform: "scale(90%)" },
+        },
+      },
+      // animation: {
+      //   appear:"appear 0.5s ease-in-out 0.5s 1 forwards, grow 8s ease-in-out 1s infinite"
+      //     ,
+      //   // grow: "",
+      // },
+    },
   },
   plugins: [],
 };

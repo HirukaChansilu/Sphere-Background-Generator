@@ -16,7 +16,7 @@ function generateHues(contentHeight) {
     i <
     getRandomInt(
       Math.round((5 / 1000) * contentHeight),
-      Math.round((10 / 1000) * contentHeight)
+      Math.round((8 / 1000) * contentHeight)
     );
     i++
   ) {
@@ -46,7 +46,7 @@ function SphereContainer(props) {
     >
       <div className="relative z-10 insphere-content">{props.content}</div>
       {generateHues(height).map((hue, i) => {
-        return <Sphere hue={hue} />;
+        return <Sphere key={i} hue={hue} />;
       })}
     </div>
   );
